@@ -11,7 +11,11 @@ namespace PingPongGenerator
       for (int i=1; i <= countingNumber; i ++)
       {
         string stringToAdd = "";
-        if (i % 3 == 0)
+        if (i % 5 == 0)
+        {
+          stringToAdd = "Pong";
+        }
+        else if (i % 3 == 0)
         {
           stringToAdd = "Ping";
         }
