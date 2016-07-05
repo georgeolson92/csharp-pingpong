@@ -1,11 +1,23 @@
 using System.Collections.Generic;
 using System;
 
-namespace PingPongGenerator
+namespace PingPongGenerator.Objects
 {
-  public class PingPongGenerator
+  public class PingPongList
   {
-    public List<string> PingPongMaker(int countingNumber)
+    private List<string> _result;
+
+    public PingPongList(int countingNumber)
+    {
+      PingPongMaker(countingNumber);
+    }
+
+    public List<string> GetResults()
+    {
+      return _result;
+    }
+
+    public void PingPongMaker(int countingNumber)
     {
       List<string> pingPongList = new List<string> {};
       for (int i=1; i <= countingNumber; i ++)
@@ -29,7 +41,7 @@ namespace PingPongGenerator
         }
         pingPongList.Add(stringToAdd);
       }
-      return pingPongList;
+      _result = pingPongList;
     }
   }
 }
